@@ -1,0 +1,10 @@
+/Archive
+/laravel/www/
+/laravel/databases 
+/ngnx_vue/app
+.idea
+.env
+.env.backup
+.phpunit.result.cache
+/.idea
+/.vscode

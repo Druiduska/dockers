@@ -1,0 +1,17 @@
+version: '3'
+services:
+  nginx_vue:
+    build: ./nginx
+    ports:
+        -  8000:8000
+
+    volumes:
+        - ${NGINX_CONF_LOCAL}:${NGINX_CONF_CONTAINER}
+        - ${APP_PATH_LOCAL}:${APP_PATH_CONTAINER}
+    networks:
+     - internal_vue
+networks:
+  internal_vue:
+    driver: bridge
+    ipam:
+      driver: default
